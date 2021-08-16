@@ -38,6 +38,20 @@ const getServer = () => {
             return 'Hello World!'
         }
     })
+    server.route({
+        method: 'POST',
+        options: {
+            description: 'Returns the current date',
+            notes: 'Returns the JSON representation of the current date',
+            tags: [
+                'api' // required by Swagger
+            ]
+        },
+        path: '/date',
+        handler: (__request, __toolkit) => {
+            return JSON.stringify(new Date())
+        }
+    })
     return server
 }
 
