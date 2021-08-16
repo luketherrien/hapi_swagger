@@ -5,7 +5,10 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "@hapi/hapi": "*"
+    "@hapi/hapi": "*",
+    "@hapi/inert": "*",
+    "@hapi/vision": "*",
+    "hapi-swagger": "*"
   },
   "devDependencies": {
     "nodemon": "*"
