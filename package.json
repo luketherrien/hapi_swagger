@@ -1,0 +1,13 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "@hapi/hapi": "*"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
