@@ -9,10 +9,10 @@ const Pack = require('./package')
 const start = async () => {
     const server = getServer()
     await server.register([
-        Inert,
-        Vision,
+        Inert, // required for Swagger static content
+        Vision, // required for Swagger static content
         {
-            plugin: Swagger,
+            plugin: Swagger, // adds Swagger support
             options: getSwaggerOptions()
         }
     ])
@@ -55,6 +55,11 @@ const getServer = () => {
     return server
 }
 
+/**
+ * Returns Swagger options.
+ *
+ * @returns {Object} - the Swagger options
+ */
 const getSwaggerOptions = () => {
     return {
         info: {
